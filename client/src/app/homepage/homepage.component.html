@@ -1,16 +1,15 @@
 <h2> Digital Display Garden</h2>
 
-<!--Todo Add instructions :)-->
+<!--Todo Add sample image to instructions to help the visitor visualize-->
 
 <h3> See the flowers in a specific bed in two steps using our QR-Codes!</h3>
 <h3> Instructions: </h3>
-<b>Step 1)</b> Open a QR-Code Scanner App on your smartphone.<br/>
-<b>Step 2)</b> Point the camera towards the QR-Code on the sign to scan it.
+<b>Step 1:</b> Open a QR-Code Scanner App on your smartphone.<br/>
+<b>Step 2:</b> Point the camera towards the QR-Code on the sign to scan it.
 
 
 <h3> Check out a bed </h3>
 <!--Bed dropdown list-->
-<!--TODO Make the bed options send them to the corresponding bedpage-->
 Select Bed
 <select id="locationDropdown" (change)="this.router.navigate(['/bed', this.bed])" [(ngModel)]=bed>
     <!--<option value="">Select Bed</option>-->
@@ -21,3 +20,24 @@ Select Bed
 <!--Searchbar that causes a list of flowers that has a commonname equal to the search value-->
 <!--TODO Give the searchbar Funcionality, offer autocomplete to their text?-->
 <input #input type="text" placeholder="Favorite Flower" (input)="searchID = $event.target.value">
+<!--Todo Add button functionality-->
+<button class="btn btn-primary" >Search</button>
+
+
+
+
+
+
+
+
+<!--<select id="commonNameDropdown" (change)="this.router.navigate(['/commonName', this.commonName])" [(ngModel)]=commonName>-->
+    <!--<option *ngFor="let commonName of plants" value="{{commonName._id}}">{{commonName._id}}</option>-->
+<!--</select>-->
+
+<!--Todo Give bed number, then list the flowers of given commonName or, give list of flowers and bed name with it-->
+<!--Lists plants that are of the commonName given in the searchbar-->
+<!--<li *ngFor="let plant of plants | filterBy: {commonName : searchID}" class="list-group-item">-->
+    <!--Cultivar: {{plant.cultivar}}-->
+    <!--Common Name: {{plant.commonName}}-->
+    <!--Bed: {{plant.gardenLocation}}-->
+<!--</li>-->
